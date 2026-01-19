@@ -1,0 +1,160 @@
+@import  url("globals.css");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4A4A4A;
+  background-color: #f3e6d5;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+header{
+    width: 100%;
+    background: #C4ABDD;
+    position: relative;
+    z-index: 2;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #c293f2;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.container-header{
+    background: #c293f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px 40px;
+}
+
+.menus-header button{
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    background: var(--cor_back);
+    color: var(--cor_font);
+    margin-left: 10px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+
+.menus-header button:nth-child(1) { --cor_back: #F07A89; --cor_font: #ffebee;}
+.menus-header button:nth-child(2) { --cor_back: #83A07C; --cor_font: #D8E0D5; }
+.menus-header button:nth-child(3) { --cor_back: #EBD5F3;  --cor_font: #9773BE; }
+
+.menus-header button:nth-child(1):hover { --cor_back: #fe6478; --cor_font: #ffebee;  transform: translateY(-2px);}
+.menus-header button:nth-child(2):hover { --cor_back: #729469; --cor_font: #D8E0D5;  transform: translateY(-2px);}
+.menus-header button:nth-child(3):hover { --cor_back: #f0cbfd;  --cor_font: #9773BE;  transform: translateY(-2px);}
+
+.msg-header {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4rem;
+    color: #6B4E8A;
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+}
+
+.mulheres-atipicas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+  padding: 60px 8%;
+  background-color: #F4EFEA; /* bege pastel */
+}
+
+/* Texto */
+.mulheres-atipicas .texto {
+  flex: 1;
+}
+
+.mulheres-atipicas h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #4A4A4A;
+  margin-bottom: 16px;
+}
+
+.mulheres-atipicas p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4A4A4A;
+  max-width: 520px;
+}
+
+/* Imagem */
+.mulheres-atipicas .imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mulheres-atipicas img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Responsividades */
+
+@media (max-width: 480px) {
+    .container-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+        margin-left: 0 -15px 10px 0;
+    }
+
+    .menus-header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .menus-header button {
+        width: 30%;
+        padding: 8px;
+        font-size: .7rem;
+      
+    }
+}
+@media (max-width: 768px) {
+  .mulheres-atipicas {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mulheres-atipicas p {
+    max-width: 100%;
+  }
+}
+
