@@ -161,7 +161,7 @@ header::after {
 }
 
 .cadastro {
-  background-color: #F3F2E0;
+  background-color: #f8f6ce;
   
 }
 
@@ -192,7 +192,12 @@ header::after {
 .apoio {
   padding: 60px 8%;
   background-color: #e9e1fe;
+  position: relative;
+  padding: 60px 8%;
+  background-color: #F4EFEA;
+  overflow: hidden; 
 }
+
 
 .apoio h2 {
   text-align: center;
@@ -240,6 +245,7 @@ header::after {
   line-height: 1.5;
   color: #5c4475;
 }
+
 
 
 /* Responsividades */
@@ -302,5 +308,78 @@ header::after {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .apoio::before,
+  .apoio::after {
+    width: 180px;
+    height: 180px;
+    opacity: 0.2;
+  }
+}
+
+/* decoracoes */
+
+.section-decorada{
+  position: relative;
+  overflow: hidden;
+}
+
+.mulheres-atipicas::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  width: 200px;
+  height: 200px;
+  background-image: url("../imgs/girassol.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.apoio::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background-image: url("../imgs/puzzle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.apoio::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 220px;
+  height: 220px;
+  background-image: url("../imgs/girassol.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.quem_somos::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background-image: url("../imgs/puzzle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 
 
