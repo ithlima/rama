@@ -1,20 +1,34 @@
 .site-footer {
-  padding: 2rem 0 3rem;
-  background: rgba(255, 255, 255, 0.55);
-  border-top: 1px solid rgba(151, 115, 190, 0.08);
+  padding: 2.4rem 0 3rem;
+  background: var(--ameixa-escuro);
+  color: #fff;
 }
 
 .site-footer strong {
   display: block;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  color: var(--roxo-escuro);
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.site-footer p,
+.site-footer a {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.site-footer a {
+  font-weight: 700;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #fff;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1.1fr 1.4fr 1fr;
+  gap: 1.25rem;
   align-items: center;
 }
 
@@ -22,10 +36,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 
-.footer-copy {
+.footer-contact {
   text-align: right;
 }
 
+.footer-copy {
+  margin-top: 0.35rem;
+  font-size: 0.92rem;
+}

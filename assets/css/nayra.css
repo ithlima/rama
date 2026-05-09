@@ -1,66 +1,64 @@
 .sobre-projeto {
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #f9f6fc, #f3eef9);
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, rgba(239, 230, 245, 0.64), rgba(255, 250, 245, 0.96));
 }
 
 .container-sobre {
-  display: flex;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
   align-items: center;
-  justify-content: center;
-  gap: 50px;
-  max-width: 1100px;
+  gap: 2.5rem;
+  max-width: 1120px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .imagem-sobre img {
   width: 260px;
   height: 260px;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+  border-radius: 1rem;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagem-sobre img:hover {
-  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-hover);
 }
 
 .texto-sobre {
-  max-width: 520px;
+  max-width: 640px;
 }
 
 .texto-sobre h2 {
-  margin-bottom: 10px;
-  color: #5e3ea1;
+  margin-bottom: 0.75rem;
 }
 
 .texto-sobre h3 {
-  margin-bottom: 5px;
+  margin-bottom: 0.25rem;
 }
 
 .cargo {
-  color: #8b6ccf;
-  font-weight: bold;
-  margin-bottom: 20px;
+  color: var(--salvia);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
 }
 
 .texto-sobre p {
-  margin-bottom: 12px;
-  line-height: 1.6;
-  color: #444;
+  margin-bottom: 0.85rem;
 }
 
 .idealizador {
-  margin-top: 20px;
+  margin-top: 1.2rem;
   font-style: italic;
-  color: #666;
 }
 
 .video-nayra {
+  grid-column: 1 / -1;
   width: 100%;
-  max-width: 500px;
-  border-radius: 15px;
-  margin-top: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  max-width: 720px;
+  border-radius: 1rem;
+  margin: 0.75rem auto 0;
+  box-shadow: var(--sombra-suave);
+  background: #000;
 }

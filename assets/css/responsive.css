@@ -4,15 +4,16 @@
   .footer-content,
   .cta-box {
     grid-template-columns: 1fr;
-    padding-bottom: 15px;
   }
 
   .quick-grid,
   .support-grid,
-  .resources-grid {
+  .resources-grid,
+  .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .footer-contact,
   .footer-copy,
   .footer-links {
     text-align: left;
@@ -20,7 +21,7 @@
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 920px) {
   .menu-toggle {
     display: inline-flex;
   }
@@ -40,21 +41,24 @@
   .reverse-on-tablet .imagem {
     order: -1;
   }
-}
 
-@media (max-width: 768px) {
-  .container-sobre {
-    flex-direction: column;
-    text-align: center;
+  .mission-grid,
+  .events-grid {
+    grid-template-columns: 1fr;
   }
 
-  .imagem-sobre img {
-    width: 200px;
-    height: 200px;
+  .container-sobre {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: min(100% - 1.25rem, 1120px);
+  }
+
   .site-header {
     padding-bottom: 3rem;
   }
@@ -68,12 +72,21 @@
   }
 
   .brand span {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
+  }
+
+  .brand strong {
+    font-size: 1rem;
+  }
+
+  .hero {
+    gap: 2rem;
   }
 
   .quick-grid,
   .support-grid,
-  .resources-grid {
+  .resources-grid,
+  .testimonials-grid {
     grid-template-columns: 1fr;
   }
 
@@ -88,13 +101,34 @@
 
   .project-item,
   .cta-box,
-  .impact-strip {
+  .impact-strip,
+  .event-card {
+    grid-template-columns: 1fr;
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .event-date {
+    width: 100%;
+    height: auto;
+    min-height: 4.4rem;
+  }
+
   .faq-question {
     font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .sobre-projeto {
+    padding: 4rem 1rem;
+  }
+
+  .imagem-sobre img {
+    width: 220px;
+    height: 220px;
   }
 }
 

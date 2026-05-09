@@ -19,14 +19,22 @@
   gap: 1rem;
   text-align: left;
   font-size: 1rem;
-  font-weight: 700;
-  color: var(--roxo-escuro);
+  font-weight: 800;
+  color: var(--ameixa-escuro);
 }
 
 .faq-symbol {
-  font-size: 1.5rem;
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--salvia-suave);
+  font-size: 1.35rem;
   line-height: 1;
-  color: var(--roxo-principal);
+  color: var(--ameixa);
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .faq-answer {
@@ -50,4 +58,5 @@
 
 .faq-item.active .faq-symbol {
   transform: rotate(45deg);
+  background: var(--lilas-suave);
 }
