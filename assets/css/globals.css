@@ -5,20 +5,21 @@
 }
 
 :root {
-  --ameixa: #4c315f;
-  --ameixa-escuro: #33213f;
-  --lilas: #9b78bc;
-  --lilas-suave: #efe6f5;
-  --salvia: #6e9278;
-  --salvia-suave: #e8f1eb;
-  --dourado: #c8a45d;
-  --texto-principal: #3f3747;
-  --texto-suave: #6d6375;
-  --fundo-site: #fbf8f4;
+  --ameixa: #5b3d68;
+  --ameixa-escuro: #2d2034;
+  --lilas: #8f6aae;
+  --lilas-suave: #f0e7f4;
+  --salvia: #537a62;
+  --salvia-suave: #e7f0e8;
+  --rosa-suave: #f8e7e4;
+  --dourado: #b48a3c;
+  --texto-principal: #322a38;
+  --texto-suave: #5f5368;
+  --fundo-site: #fffaf6;
   --branco: #ffffff;
-  --borda-suave: rgba(76, 49, 95, 0.12);
-  --sombra-suave: 0 18px 42px rgba(51, 33, 63, 0.10);
-  --sombra-hover: 0 22px 48px rgba(51, 33, 63, 0.15);
+  --borda-suave: rgba(45, 32, 52, 0.12);
+  --sombra-suave: 0 16px 34px rgba(45, 32, 52, 0.10);
+  --sombra-hover: 0 20px 42px rgba(45, 32, 52, 0.14);
 }
 
 html {
@@ -30,7 +31,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--texto-principal);
-  background: linear-gradient(180deg, #fffaf5 0%, var(--fundo-site) 52%, #f5f0eb 100%);
+  background:
+    linear-gradient(180deg, #fffaf6 0%, #fbf7f0 44%, #f4f8f1 100%);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -63,18 +65,31 @@ button {
   cursor: pointer;
   border: none;
   font-family: inherit;
-  transition: background-color 0.25s ease, transform 0.18s ease, box-shadow 0.25s ease;
-}
-
-button:hover,
-a:hover {
-  transform: translateY(-1px);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgba(110, 146, 120, 0.28);
+  outline: 3px solid rgba(83, 122, 98, 0.38);
   outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10000;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--ameixa-escuro);
+  color: #fff;
+  font-weight: 800;
+  transform: translateY(-140%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
 }
 
 .container {
@@ -83,9 +98,9 @@ a:focus-visible {
 }
 
 .soft-card {
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--borda-suave);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: var(--sombra-suave);
 }
 
@@ -128,7 +143,7 @@ a:focus-visible {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--ameixa), #6f4a82);
+  background: linear-gradient(135deg, var(--ameixa), #744f7e);
   color: #fff;
   box-shadow: 0 16px 30px rgba(76, 49, 95, 0.24);
 }
@@ -140,8 +155,8 @@ a:focus-visible {
 }
 
 .btn-secondary {
-  border-color: rgba(76, 49, 95, 0.18);
-  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(76, 49, 95, 0.24);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--ameixa);
 }
 

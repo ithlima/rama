@@ -1,6 +1,7 @@
 @media (max-width: 1100px) {
   .hero,
   .split-layout,
+  .info-layout,
   .footer-content,
   .cta-box {
     grid-template-columns: 1fr;
@@ -43,7 +44,8 @@
   }
 
   .mission-grid,
-  .events-grid {
+  .events-grid,
+  .info-grid {
     grid-template-columns: 1fr;
   }
 
@@ -81,6 +83,10 @@
 
   .hero {
     gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 12vw, 3rem);
   }
 
   .quick-grid,

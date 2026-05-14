@@ -1,6 +1,6 @@
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
   gap: 3rem;
   align-items: center;
   position: relative;
@@ -9,8 +9,8 @@
 }
 
 .hero h1 {
-  font-size: clamp(2.25rem, 5vw, 4.5rem);
-  max-width: 13ch;
+  font-size: clamp(2.35rem, 5vw, 4.7rem);
+  max-width: 15ch;
 }
 
 .hero p {
@@ -37,13 +37,34 @@
 
 .hero-highlights li,
 .info-pills span {
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.82);
   color: var(--texto-principal);
   padding: 0.72rem 0.95rem;
   border-radius: 999px;
   font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(45, 32, 52, 0.10);
   box-shadow: 0 8px 18px rgba(51, 33, 63, 0.07);
+}
+
+.hero-note {
+  display: grid;
+  gap: 0.2rem;
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--salvia);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 24px rgba(45, 32, 52, 0.08);
+}
+
+.hero-note strong {
+  color: var(--ameixa-escuro);
+  font-weight: 800;
+}
+
+.hero-note span {
+  color: var(--texto-suave);
 }
 
 .hero-visual {
@@ -65,6 +86,16 @@
 
 .hero-card-content {
   padding: 1.35rem 1.4rem 1.5rem;
+}
+
+.card-eyebrow {
+  display: inline-flex;
+  margin-bottom: 0.65rem;
+  color: var(--salvia);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .hero-card-content strong {
@@ -108,13 +139,23 @@
   height: 3rem;
   display: grid;
   place-items: center;
-  border-radius: 0.85rem;
-  background: var(--salvia-suave);
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--salvia-suave), var(--lilas-suave));
   color: var(--ameixa);
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 0.95rem;
   margin-bottom: 1rem;
+}
+
+.icon-badge svg {
+  width: 1.45rem;
+  height: 1.45rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .quick-item h2 {
@@ -127,7 +168,7 @@
 }
 
 .section-soft {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.60), rgba(232, 241, 235, 0.58));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(231, 240, 232, 0.62));
 }
 
 .section-split {
@@ -167,7 +208,7 @@
 .mission-grid article {
   padding: 1rem;
   border: 1px solid var(--borda-suave);
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -220,9 +261,42 @@
 .resource-card:hover,
 .event-card:hover,
 .testimonial-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--sombra-hover);
   border-color: rgba(110, 146, 120, 0.28);
+}
+
+.info-section {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(248, 231, 228, 0.44));
+}
+
+.info-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.info-card {
+  padding: 1.35rem;
+  border-top: 4px solid rgba(83, 122, 98, 0.42);
+}
+
+.info-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-card-strong {
+  background: #fff7ed;
+  border-color: rgba(180, 138, 60, 0.52);
 }
 
 .support-card p,
@@ -259,7 +333,7 @@
   display: grid;
   place-items: center;
   align-content: center;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   background: var(--ameixa);
   color: #fff;
 }
@@ -324,7 +398,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.1rem;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--borda-suave);
 }
@@ -383,6 +457,15 @@
   padding: 2rem;
   background:
     linear-gradient(135deg, rgba(239, 230, 245, 0.92), rgba(232, 241, 235, 0.9));
+}
+
+.cta-list {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+  color: var(--texto-suave);
+  font-weight: 700;
 }
 
 .impact-strip {

@@ -1,19 +1,20 @@
 .site-header {
   position: relative;
   overflow: hidden;
-  padding: 1rem 0 4.8rem;
+  padding: 1rem 0 5.4rem;
   background:
-    linear-gradient(135deg, rgba(255, 250, 245, 0.95) 0%, rgba(239, 230, 245, 0.92) 48%, rgba(232, 241, 235, 0.94) 100%);
+    linear-gradient(135deg, rgba(255, 250, 246, 0.96) 0%, rgba(248, 231, 228, 0.82) 34%, rgba(231, 240, 232, 0.94) 100%);
 }
 
 .site-header::before {
   content: "";
   position: absolute;
-  inset: auto -8rem -8rem auto;
-  width: 34rem;
-  height: 34rem;
-  border-radius: 50%;
-  background: rgba(200, 164, 93, 0.12);
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.52) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  opacity: 0.32;
   pointer-events: none;
 }
 
@@ -37,7 +38,7 @@
   height: 3rem;
   display: grid;
   place-items: center;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   background: #fff;
   color: var(--ameixa);
   font-family: 'Poppins', sans-serif;
@@ -65,7 +66,7 @@
 }
 
 .menu a {
-  padding: 0.78rem 0.88rem;
+  padding: 0.72rem 0.78rem;
   border-radius: 999px;
   color: var(--texto-principal);
   font-weight: 700;
@@ -76,7 +77,6 @@
 
 .menu a:hover,
 .menu a:focus-visible {
-  transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -90,7 +90,7 @@
   display: none;
   width: 3rem;
   height: 3rem;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 10px 24px rgba(51, 33, 63, 0.12);
   align-items: center;
@@ -127,7 +127,7 @@
   position: relative;
   width: min(100%, 22rem);
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 3.8rem 1.4rem 1.6rem;
   text-align: center;
   box-shadow: 0 24px 48px rgba(34, 24, 43, 0.22);
@@ -162,6 +162,11 @@
   color: var(--ameixa-escuro);
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus-visible {
+  background: rgba(76, 49, 95, 0.16);
 }
 
 @keyframes fadeInMenu {

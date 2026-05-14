@@ -21,6 +21,12 @@
   font-size: 1rem;
   font-weight: 800;
   color: var(--ameixa-escuro);
+  border-radius: 0.5rem;
+}
+
+.faq-question:hover,
+.faq-question:focus-visible {
+  background: rgba(231, 240, 232, 0.62);
 }
 
 .faq-symbol {

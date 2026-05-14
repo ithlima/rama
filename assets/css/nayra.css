@@ -16,7 +16,7 @@
   width: 260px;
   height: 260px;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: var(--sombra-suave);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -57,7 +57,7 @@
   grid-column: 1 / -1;
   width: 100%;
   max-width: 720px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   margin: 0.75rem auto 0;
   box-shadow: var(--sombra-suave);
   background: #000;

@@ -60,13 +60,19 @@ faqItems.forEach((item) => {
 
   if (!button) return;
 
+  button.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+
   button.addEventListener('click', () => {
     const isActive = item.classList.contains('active');
 
-    faqItems.forEach((faq) => faq.classList.remove('active'));
+    faqItems.forEach((faq) => {
+      faq.classList.remove('active');
+      faq.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+    });
 
     if (!isActive) {
       item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
     }
   });
 });
